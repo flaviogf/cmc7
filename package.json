@@ -1,8 +1,11 @@
 {
   "name": "cmc7",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "pacote para leitura cmc7",
   "main": "index.js",
   "author": "Flavio Fernandes",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "url": "https://github.com/flaviogf/Cmc7"
+  }
 }

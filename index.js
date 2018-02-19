@@ -3,12 +3,14 @@ const bancos = require('./fator')
 class Cmc7 {
 
   static instance(cheque, fatores = bancos) {
-    return new Cmc7(cheque)
+    return new Cmc7(cheque, fatores)
   }
 
-  constructor(cmc7 = '') {
-    if (cmc7.length < 30) throw 'CMC7 INVÁLIDO'
+  constructor(cmc7 = '', fatores) {
+    if (typeof fatores !== 'object') throw 'fatores inválidos'
+    if (cmc7.length < 30) throw 'cmc7 inválido'
     this.cmc7 = cmc7.replace(/\s/g, '')
+    this.fatores = fatores
   }
 
   get banco() {
@@ -32,8 +34,8 @@ class Cmc7 {
   }
 
   get conta() {
-    const inicioNumeroConta = bancos[this.banco] + 19, fimNumeroConta = 28
-    return this.cmc7.substring(inicioNumeroConta, fimNumeroConta)
+    const inicioNumeroConta = this.fatores[this.banco] + 19, fimNumeroConta = 28
+    return isNaN(inicioNumeroConta) ? '' : this.cmc7.substring(inicioNumeroConta, fimNumeroConta)
   }
 
   get digitoConta() {
