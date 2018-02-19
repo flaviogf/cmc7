@@ -1,0 +1,8 @@
+{
+  "name": "cmc7",
+  "version": "1.0.4",
+  "description": "pacote para leitura cmc7",
+  "main": "index.js",
+  "author": "Flavio Fernandes",
+  "license": "ISC"
+}
