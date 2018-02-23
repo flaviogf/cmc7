@@ -8,7 +8,7 @@ class Cmc7 {
 
   constructor(cmc7 = '', fatores) {
     if (typeof fatores !== 'object') throw 'fatores inválidos'
-    if (cmc7.length < 30) throw 'cmc7 inválido'
+    if (cmc7.length !== 30) throw 'cmc7 inválido'
     this.cmc7 = cmc7.replace(/\s/g, '')
     this.fatores = fatores
   }
