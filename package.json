@@ -1,6 +1,6 @@
 {
   "name": "cmc7",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "pacote para leitura cmc7",
   "main": "index.js",
   "author": "Flavio Fernandes",
